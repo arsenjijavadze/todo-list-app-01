@@ -1,5 +1,8 @@
 * {
   margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
 }
 
 body {
@@ -7,5 +10,17 @@ body {
   font-family: -apple-system, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.todo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 750px;
+  height: 530px;
+  &__sidebar {
+    background-color: #F4F6F8;
+    width: 200px;
+  }
 }
 
