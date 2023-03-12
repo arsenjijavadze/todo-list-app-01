@@ -1,9 +1,14 @@
 
 
 function App() {
-  return (
-    <h1>123</h1>
-  );
+  return <div className="todo">
+    <div className="todo__sidebar">
+      <button>Hello</button>
+    </div>
+    <div className="todo__tasks">
+
+    </div>
+  </div>
 }
 
 export default App;
