@@ -1,4 +1,4 @@
-import listSvg from './assets/img/list.svg'
+import React from 'react';
 import List from './components/List'
 
 function App() {
@@ -6,9 +6,10 @@ function App() {
     <div className="todo" >
       <div className="todo__sidebar">
         <List
-          Debugger
+
           items={[
             {
+
               icon: (
                 <svg width="18"
                   height="18"
@@ -26,6 +27,24 @@ function App() {
             }
 
           ]} />
+        <List items={[
+          {
+            color: '#42B883',
+            name: 'Purchases'
+          }
+        ]} />
+        <List items={[
+          {
+            color: '#64C4ED',
+            name: 'FrontEnd'
+          }
+        ]} />
+        <List items={[
+          {
+            color: '#FFBBCC',
+            name: 'Films and TV series'
+          }
+        ]} />
       </div>
       <div className="todo__tasks">
 
