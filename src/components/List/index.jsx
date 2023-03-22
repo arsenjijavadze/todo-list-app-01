@@ -3,12 +3,12 @@ import React from "react";
 const List = ({ items }) => {
 
     return (
-        <ul className="todo__list">
+        <ul className="list">
 
             {items.map((item, index) => (
                 <li key={index} className="active">
                     <i>
-                        {item.icon}
+                        {item.icon ? item.icon : <i className={`badge badge--${item.color}`}></i>}
                     </i>
                     <span>{item.name}</span>
                 </li>
