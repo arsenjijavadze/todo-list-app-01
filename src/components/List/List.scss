@@ -20,14 +20,18 @@
             fill: #7c7c7c;
           } 
         }
-        // img {
-        //   opacity: 0.6;
-        // }
-        /* Rectangle 3 */
-
-
-
-
       }
+
+      .badge{
+        /* Ellipse 2 */
+        width: 10px;
+        height: 10px;
+        border-radius: 30px;
+        
+        &--green{
+            background-color: #42B883;
+        }
+      }
+
     }
   }

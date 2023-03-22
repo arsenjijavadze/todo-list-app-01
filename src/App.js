@@ -29,7 +29,7 @@ function App() {
           ]} />
         <List items={[
           {
-            color: '#42B883',
+            color: 'green',
             name: 'Purchases'
           }
         ]} />
