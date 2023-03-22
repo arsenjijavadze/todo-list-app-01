@@ -35,13 +35,13 @@ function App() {
         ]} />
         <List items={[
           {
-            color: '#64C4ED',
+            color: 'blue',
             name: 'FrontEnd'
           }
         ]} />
         <List items={[
           {
-            color: '#FFBBCC',
+            color: 'pink',
             name: 'Films and TV series'
           }
         ]} />
