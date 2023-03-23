@@ -23,7 +23,8 @@ function App() {
                   />
                 </svg>
               ),
-              name: 'Tasks'
+              name: 'Tasks',
+              active: true
             }
 
           ]} />
@@ -31,20 +32,18 @@ function App() {
           {
             color: 'green',
             name: 'Purchases'
-          }
-        ]} />
-        <List items={[
+          },
           {
             color: 'blue',
             name: 'FrontEnd'
-          }
-        ]} />
-        <List items={[
+          },
           {
             color: 'pink',
             name: 'Films and TV series'
           }
+
         ]} />
+
       </div>
       <div className="todo__tasks">
 

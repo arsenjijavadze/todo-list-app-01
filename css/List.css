@@ -1,0 +1,42 @@
+.list {
+  margin-bottom: 30px;
+}
+.list ul {
+  margin: 0;
+}
+.list li {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+.list li.active {
+  background: #ffffff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+.list li i {
+  display: inline-flex;
+  margin-right: 10px;
+}
+.list li i svg path {
+  fill: #7c7c7c;
+}
+.list li .badge {
+  /* Ellipse 2 */
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  position: relative;
+  left: 5px;
+}
+.list li .badge--green {
+  background-color: #42b883;
+}
+.list li .badge--blue {
+  background-color: #64c4ed;
+}
+.list li .badge--pink {
+  background-color: #ffbbcc;
+}
