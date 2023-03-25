@@ -27,7 +27,9 @@ function App() {
               active: true
             }
 
-          ]} />
+          ]}
+
+        />
         <List items={[
           {
             color: 'green',
@@ -42,7 +44,9 @@ function App() {
             name: 'Films and TV series'
           }
 
-        ]} />
+        ]}
+          isRemovable
+        />
 
       </div>
       <div className="todo__tasks">

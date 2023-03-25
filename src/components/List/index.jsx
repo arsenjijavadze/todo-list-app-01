@@ -2,7 +2,7 @@ import React from "react";
 
 import './List.scss';
 
-const List = ({ items }) => {
+const List = ({ items, isRemovable }) => {
 
     return (
         <ul className="list">
