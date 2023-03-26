@@ -2,13 +2,11 @@
      margin-bottom: 30px;
      
      &__add-button{
-        svg{
-            path {
-                stroke: #868686;
-            }
-        }
-        span{
-            color: #767676;
+        opacity: 0.4;
+        
+
+        &:hover{
+            opacity: 1;
         }
      }
 
