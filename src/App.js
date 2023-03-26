@@ -1,8 +1,10 @@
 import React from 'react';
 import List from './components/List'
 
+
 function App() {
   return (
+
     <div className="todo" >
       <div className="todo__sidebar">
         <List
@@ -46,6 +48,27 @@ function App() {
 
         ]}
           isRemovable
+        />
+
+        <List
+
+          items={[
+            {
+
+              icon: (
+
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                  width="16" height="16"
+                  viewBox="0 0 16 16">
+                  <path d="M8,0C3.582,0,0,3.582,0,8s3.582,8,8,8s8-3.582,8-8S12.418,0,8,0z M12,9H9v3H7V9H4V7h3V4h2v3h3V9z"></path>
+                </svg>
+              ),
+              name: 'Add list',
+
+            }
+
+          ]}
+
         />
 
       </div>
