@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import List from "../List";
 
 import './AddListButton.scss';
 
 const AddListButton = () => {
-    return (
-        <React.Fragment>
-            <List
+    const [visiblePopup, setVisiblePopup] = useState(true);
 
+    return (
+        <div className="add-list">
+            <List
+                onClick={() => setVisiblePopup(true)}
                 items={[
                     {
                         className: 'list__add-button',
@@ -28,10 +30,11 @@ const AddListButton = () => {
                     }
                 ]}
             />
-            <div className="add-list-popup">
-                <h1>123</h1>
-            </div>
-        </React.Fragment>
+            {visiblePopup && <div className="add-list__popup">
+                <input className="field" type="text" placeholder="List name" />
+                <button>Add</button>
+            </div>}
+        </div>
     );
 };
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import List from './components/List';
-import AddListButton from './components/AddList';
+import AddList from './components/AddList';
 
 
 function App() {
@@ -54,7 +54,7 @@ function App() {
           isRemovable
         />
 
-        <AddListButton />
+        <AddList />
 
       </div>
       <div className="todo__tasks">
