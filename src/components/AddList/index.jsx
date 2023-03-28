@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import List from "../List";
 
+
+
 import './AddListButton.scss';
 
-const AddListButton = () => {
+const AddList = ({ colors }) => {
     const [visiblePopup, setVisiblePopup] = useState(true);
 
     return (
@@ -32,10 +34,16 @@ const AddListButton = () => {
             />
             {visiblePopup && <div className="add-list__popup">
                 <input className="field" type="text" placeholder="List name" />
-                <button>Add</button>
+                <div className="add-list__popup-colors">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <button className="button">Add</button>
             </div>}
         </div>
     );
 };
 
-export default AddListButton;
+export default AddList;
