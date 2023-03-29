@@ -11,8 +11,26 @@
         
         .button{
             width: 100%;
-            margin-top: 15px;
+            margin-top: 12px;
         }
+
+        &-colors{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 12px;
+            
+            .badge{
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                border: 2px solid transparent;
+
+                &.active{
+                    border: 2px solid #525252;
+                }
+            }
+        }
+
 
     } 
 }
