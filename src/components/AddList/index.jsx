@@ -8,6 +8,9 @@ import './AddListButton.scss';
 
 const AddList = ({ colors }) => {
     const [visiblePopup, setVisiblePopup] = useState(true);
+    const [selectedColor, setSelectedColor] = useState(null);
+
+    console.log(selectedColor);
 
     return (
         <div className="add-list">
@@ -38,7 +41,12 @@ const AddList = ({ colors }) => {
                 <div className="add-list__popup-colors">
                     {
                         colors.map((color) => (
-                            <Badge key={color.id} color={color.name} />
+                            <Badge
+                                onClick={() => setSelectedColor(color.id)}
+                                key={color.id}
+                                color={color.name}
+                                className={selectedColor === color.id && 'active'}
+                            />
                         ))
                     }
                 </div>
