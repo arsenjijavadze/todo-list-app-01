@@ -6,7 +6,12 @@ import DB from './assets/db.json'
 
 
 function App() {
-
+  const [lists, setLists] = useState(
+    DB.lists.map(item => {
+      item.color = DB.colors.filter(color => color.id === item.colorId)[0].name;
+      return item;
+    })
+  )
   return (
 
     <div className="todo" >
@@ -38,21 +43,7 @@ function App() {
           ]}
 
         />
-        <List items={[
-          {
-            color: 'green',
-            name: 'Purchases'
-          },
-          {
-            color: 'blue',
-            name: 'FrontEnd'
-          },
-          {
-            color: 'pink',
-            name: 'Films and TV series'
-          }
-
-        ]}
+        <List items={lists}
           isRemovable
         />
 

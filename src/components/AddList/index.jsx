@@ -4,13 +4,11 @@ import Badge from "../Badge";
 
 import closeSvg from '../../assets/img/close.svg'
 
-import './AddListButton.scss';
+import './AddList.scss';
 
 const AddList = ({ colors }) => {
-    const [visiblePopup, setVisiblePopup] = useState(true);
+    const [visiblePopup, setVisiblePopup] = useState(false);
     const [selectedColor, setSelectedColor] = useState(colors[0].id);
-
-    console.log(selectedColor);
 
     return (
         <div className="add-list">
