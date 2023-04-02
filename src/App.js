@@ -11,7 +11,17 @@ function App() {
       item.color = DB.colors.filter(color => color.id === item.colorId)[0].name;
       return item;
     })
-  )
+  );
+
+  const onAddList = (obj) => {
+    console.log('add list', obj);
+    const newList = [
+      ...lists,
+      obj
+    ];
+    setLists(newList);
+  };
+
   return (
 
     <div className="todo" >
@@ -47,7 +57,10 @@ function App() {
           isRemovable
         />
 
-        <AddList colors={DB.colors} />
+        <AddList
+          onAdd={onAddList}
+          colors={DB.colors}
+        />
 
       </div>
       <div className="todo__tasks">
