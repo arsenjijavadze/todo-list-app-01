@@ -53,7 +53,11 @@ function App() {
           ]}
 
         />
-        <List items={lists}
+        <List
+          items={lists}
+          onRemove={(list) => {
+            console.log(list);
+          }}
           isRemovable
         />
 

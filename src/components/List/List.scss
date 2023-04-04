@@ -1,18 +1,15 @@
 .list {
     $self: &;
 
-     margin-bottom: 30px;
-     
-     &__add-button{
-        opacity: 0.4;
-        
+    margin-bottom: 30px;
 
-        &:hover{
+    &__add-button {
+        opacity: 0.4;
+
+        &:hover {
             opacity: 1;
         }
-     }
-
-     
+    }
 
     li {
         display: flex;
@@ -20,23 +17,23 @@
         padding: 10px 12px;
         cursor: pointer;
 
-        &:hover #{$self}__remove-icon{
+        &:hover #{$self}__remove-icon {
             opacity: 0.2;
         }
 
-        #{$self}__remove-icon{
+        #{$self}__remove-icon {
             opacity: 0;
 
-            &:hover{
+            &:hover {
                 opacity: 0.8;
             }
         }
 
-        span{
+        span {
             flex: 1;
         }
 
-        &:hover{
+        &:hover {
             background: rgba(255, 255, 255, 0.5);
         }
 
@@ -46,7 +43,7 @@
             border-radius: 4px;
         }
 
-        .badge{
+        .badge {
             position: relative;
             left: 5px;
         }
@@ -57,11 +54,8 @@
             svg {
                 path {
                     fill: #7c7c7c;
-                    
                 }
             }
         }
-
-        
     }
 }
