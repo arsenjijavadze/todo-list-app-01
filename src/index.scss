@@ -9,6 +9,7 @@
 }
 
 .todo {
+  display: flex;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -27,10 +28,27 @@
     border-right: 1px solid #f1f1f1;
     padding: 60px 20px;
   }
+
+  &__tasks {
+    flex: 1;
+    padding: 60px;
+  }
+}
+
+.tasks {
+  &__title {
+
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #64c4ed;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #555454;
+  }
 }
 
 .button {
-
   background: #4dd599;
   border-radius: 4px;
   color: #fff;
@@ -38,11 +56,11 @@
   padding: 10px 20px;
   cursor: pointer;
 
-  &:hover{
-    background:darken( #4dd599, 5%);
+  &:hover {
+    background: darken(#4dd599, 5%);
   }
-  &:active{
-    background:darken( #4dd599, 10%);
+  &:active {
+    background: darken(#4dd599, 10%);
   }
 }
 
