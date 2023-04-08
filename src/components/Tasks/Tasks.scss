@@ -25,10 +25,33 @@
         }
     }
 
+    &__items{
+        margin-top: 30px;
+        &-row{
+            display: flex;
+            align-items: center;
+
+            input{
+                margin-left: 15px;
+                border: 0;
+                font-size: 16px;
+                width: 100px;
+            }
+        }
+    }
+
     .checkbox {
         
         input{
             display: none;
+            
+        }
+
+        svg{
+            transition: opacity 1s ease-in-out;
+            path{
+                stroke: #f2f2f2;
+            }
         }
 
         input:checked + label{
@@ -65,6 +88,7 @@
             width: 20px;
             height: 20px;
             cursor: pointer;
+            transition: background-color 0.15s ease-in-out, border-color background-color 0.15s ease-in-out;
 
             svg{
                 opacity: 0;

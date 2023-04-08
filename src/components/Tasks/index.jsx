@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import editSvg from '../../assets/img/edit.svg'
 
 import './Tasks.scss';
 
-
 const Tasks = () => {
+    const [taskValue, setTaskValue] = useState('ReactJS Hooks (useState, useReducer, useEffect and etc)');
 
     return (
         <div className="tasks">
@@ -24,6 +24,7 @@ const Tasks = () => {
                         </label>
 
                     </div>
+                    <input type="text" value={taskValue} onChange={e => setTaskValue(e.target.value)} />
                 </div>
             </div>
         </div>
