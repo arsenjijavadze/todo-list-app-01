@@ -6,11 +6,9 @@ import { List, AddList, Tasks } from './components';
 
 
 function App() {
-
-
-
   const [lists, setLists] = useState();
   const [colors, setColors] = useState(null);
+  const [activeItem, setActiveItem] = useState(null);
 
 
   useEffect(() => {
@@ -69,6 +67,10 @@ function App() {
               const newLists = lists.filter(item => item.id != id);
               setLists(newLists);
             }}
+            onClickItem={item => {
+              setActiveItem(item);
+            }}
+            activeItem={activeItem}
             isRemovable
           />
 
