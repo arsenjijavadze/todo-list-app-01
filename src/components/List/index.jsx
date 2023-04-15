@@ -8,7 +8,7 @@ import Badge from "../Badge";
 
 import './List.scss';
 
-const List = ({ items, isRemovable, onClick, onRemove, onClickItem }) => {
+const List = ({ items, isRemovable, onClick, onRemove, onClickItem, activeItem }) => {
 
     const removeList = (item) => {
         if (window.confirm('Are you sure you want to delete this list?')) {
@@ -28,7 +28,7 @@ const List = ({ items, isRemovable, onClick, onRemove, onClickItem }) => {
 
                 <li
                     key={index}
-                    className={classNames(item.className, { 'active': item.active })}
+                    className={classNames(item.className, { 'active': activeItem && activeItem.id === item.id })}
                     onClick={onClickItem ? () => onClickItem(item) : null}
                 >
                     <i>
