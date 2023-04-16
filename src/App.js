@@ -32,7 +32,16 @@ function App() {
   };
 
 
-
+  const onEditListTitle = (id, title) => {
+    console.log(id, title);
+    const newList = lists.map(item => {
+      if (item.id === id) {
+        item.name = title;
+      }
+      return item;
+    });
+    setLists(newList);
+  }
 
   return (
 
@@ -85,7 +94,7 @@ function App() {
 
       </div>
       <div className="todo__tasks">
-        {lists && <Tasks list={lists[1]} />}
+        {lists && activeItem && <Tasks list={activeItem} onEditTitle={onEditListTitle} />}
       </div>
 
     </div>
