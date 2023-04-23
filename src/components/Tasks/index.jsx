@@ -1,7 +1,12 @@
 import React from "react";
-import editSvg from '../../assets/img/edit.svg'
+import axios from "axios";
+
+
+import editSvg from '../../assets/img/edit.svg';
+
 
 import './Tasks.scss';
+import AddTaskForm from "./AddTaskForm";
 
 const Tasks = ({ list, onEditTitle }) => {
 
@@ -9,6 +14,12 @@ const Tasks = ({ list, onEditTitle }) => {
         const newTitle = window.prompt('List name', list.name);
         if (newTitle) {
             onEditTitle(list.id, newTitle);
+
+            axios.patch('http://localhost:3001/lists/' + list.id, {
+                name: newTitle
+            }).catch(() => {
+                alert('Failed to update');
+            });
         }
     }
     return (
@@ -19,8 +30,8 @@ const Tasks = ({ list, onEditTitle }) => {
             </h2>
 
             <div className="tasks__items">
-                {!list.tasks.length && <h2>No tasks</h2>}
-                {list.tasks.map(task => (
+                {list.tasks && !list.tasks.length && <h2>No tasks</h2>}
+                {list.tasks && list.tasks.map(task => (
                     <div key={task.id} className="tasks__items-row">
                         <div className="checkbox">
                             <input id={`task-${task.id}`} type="checkbox" />
@@ -45,6 +56,7 @@ const Tasks = ({ list, onEditTitle }) => {
                         <input readOnly value={task.text} />
                     </div>
                 ))}
+                <AddTaskForm />
             </div>
         </div>
     );

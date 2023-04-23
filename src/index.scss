@@ -44,12 +44,28 @@
   border: 0;
   padding: 10px 20px;
   cursor: pointer;
+  font-size: 14px;
+
+  
 
   &:hover {
     background: darken(#4dd599, 5%);
   }
   &:active {
     background: darken(#4dd599, 10%);
+  }
+
+  &--grey{
+    background: #dadcdd;
+    color: #444;
+
+    &:hover{
+      background: darken(#dadcdd, 3%);
+    }
+
+    &:active{
+      background: darken(#dadcdd, 6%);
+    }
   }
 }
 
@@ -60,6 +76,7 @@
   box-sizing: border-box;
   padding: 8px 12px;
   width: 100%;
+  font-size: 14px;
 
   &:focus {
     border-color: #dfd8d8;
