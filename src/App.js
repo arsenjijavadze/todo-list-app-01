@@ -6,9 +6,10 @@ import { List, AddList, Tasks } from './components';
 
 
 function App() {
-  const [lists, setLists] = useState();
+  const [lists, setLists] = useState(null);
   const [colors, setColors] = useState(null);
   const [activeItem, setActiveItem] = useState(null);
+
 
 
   useEffect(() => {
@@ -24,11 +25,35 @@ function App() {
   }, []);
 
   const onAddList = (obj) => {
-    const newList = [
-      ...lists,
-      obj
-    ];
+    const newList = [...lists, obj];
     setLists(newList);
+
+  };
+
+  const onAddTask = (listId, taskObj) => {
+    // const item = lists.find(item => item.id === listId);
+    // if (item && Array.isArray(item.tasks)) { // Added a check that `item.task` is an array.
+    //   const updatedTasks = [...item.tasks, taskObj];
+    //   const updatedLists = lists.map(item => {
+    //     if (item.id === listId) {
+    //       return { ...item, tasks: updatedTasks };
+    //     }
+    //     return item;
+    //   });
+    //   setLists(updatedLists);
+
+    // }
+
+    const newList = lists.map(item => {
+      if (item.id === listId) {
+        item.tasks = [...item.tasks, taskObj];
+      }
+
+      return item;
+    });
+
+    setLists(newList);
+
   };
 
 
@@ -50,6 +75,7 @@ function App() {
         <List
           items={[
             {
+              active: true,
               icon: (
                 <svg width="18"
                   height="18"
@@ -94,7 +120,7 @@ function App() {
 
       </div>
       <div className="todo__tasks">
-        {lists && activeItem && <Tasks list={activeItem} onEditTitle={onEditListTitle} />}
+        {lists && activeItem && <Tasks list={activeItem} onAddTask={onAddTask} onEditTitle={onEditListTitle} />}
       </div>
 
     </div>

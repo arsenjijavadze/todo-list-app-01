@@ -34,6 +34,11 @@
       "name": "Course on ReactJS ToDo",
       "colorId": 7,
       "id": 7
+    },
+    {
+      "name": "test",
+      "colorId": 6,
+      "id": 8
     }
   ],
   "tasks": [
@@ -120,6 +125,60 @@
       "text": "Made deleting and editing tasks and lists",
       "completed": true,
       "id": 17
+    },
+    {
+      "listId": 5,
+      "text": "test_personal",
+      "completed": false,
+      "id": 20
+    },
+    {
+      "listId": 7,
+      "text": "test",
+      "completed": false,
+      "id": 39
+    },
+    {
+      "listId": 7,
+      "text": "gfgfdgfd",
+      "completed": false,
+      "id": 41
+    },
+    {
+      "listId": 5,
+      "text": "fdsfsdf",
+      "completed": false,
+      "id": 43
+    },
+    {
+      "listId": 7,
+      "text": "gfgfhfgh",
+      "completed": false,
+      "id": 44
+    },
+    {
+      "listId": 4,
+      "text": "12",
+      "completed": false,
+      "id": 48
+    },
+    {
+      "listId": 7,
+      "text": "lk",
+      "completed": false,
+      "id": 49
+    },
+    {
+      "listId": 1,
+      "text": "",
+      "completed": false,
+      "id": 50
+    },
+    {
+      "listId": 8,
+      "text": "dfsdfs",
+      "completed": false,
+      "id": 51
     }
   ],
   "colors": [

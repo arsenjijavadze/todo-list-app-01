@@ -55,6 +55,10 @@
     background: darken(#4dd599, 10%);
   }
 
+  &:disabled{
+    background: #d8d8d8;
+  }
+
   &--grey{
     background: #dadcdd;
     color: #444;
